@@ -15,10 +15,6 @@ resource "aws_autoscaling_group" "ec2-lab" {
   max_size             = 3
   min_size             = 1
   name                 = "app-asg"
-  enabled_metrics      = []
-  load_balancers       = []
-  suspended_processes  = []
-  termination_policies = []
 
   launch_template {
     id      = aws_launch_template.ec2-lab.id
